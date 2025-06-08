@@ -1,0 +1,345 @@
+document.addEventListener('DOMContentLoaded', function() {
+    // Set current year in footer
+    const currentYearSpan = document.getElementById('current-year');
+    if (currentYearSpan) {
+        currentYearSpan.textContent = new Date().getFullYear();
+    }
+
+    // --- Section Navigation Logic (Showing/Hiding sections) ---
+    const navLinks = document.querySelectorAll('.main-nav ul li a'); // Select all nav links including login
+    const contentSections = document.querySelectorAll('.content-section');
+
+    function showSection(targetId) {
+        contentSections.forEach(section => {
+            section.classList.remove('active');
+            section.classList.add('hidden');
+        });
+
+        const targetSection = document.querySelector(targetId);
+        if (targetSection) {
+            targetSection.classList.remove('hidden');
+            targetSection.classList.add('active');
+        }
+
+        // Update active link in navigation, but skip for auth-section if it's not a primary nav item
+        navLinks.forEach(navLink => navLink.classList.remove('active-link'));
+        const activeNavLink = document.querySelector(`.main-nav ul li a[href="${targetId}"]`);
+        if (activeNavLink && targetId !== '#auth-section') { // Only set active for regular nav links
+            activeNavLink.classList.add('active-link');
+        } else if (targetId === '#auth-section') {
+            // For auth section, ensure it's hidden from normal nav flow
+            document.querySelector('.main-nav ul li a[href="#auth-section"]').classList.add('active-link'); // Keep login button active if on auth page
+        }
+
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Add event listeners to all navigation links
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            // Prevent default behavior only for internal links handled by JS
+            const href = this.getAttribute('href');
+            if (href.startsWith('#')) {
+                e.preventDefault();
+                showSection(href);
+            }
+        });
+    });
+
+    // Handle "مشاهده جزئیات" buttons to show specific book detail section
+    document.querySelectorAll('.view-book-detail').forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            showSection(targetId);
+        });
+    });
+
+    // Handle "بازگشت به لیست" button click
+    document.querySelectorAll('.go-back-btn').forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            showSection('#books-section');
+        });
+    });
+
+    // --- Comments Section Logic ---
+    document.querySelectorAll('.show-comments-btn').forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            const bookDetailSection = this.closest('.book-detail-section');
+            const bookTitle = bookDetailSection ? bookDetailSection.querySelector('.book-detail-info h3').textContent : 'نامشخص';
+            document.getElementById('comments-book-title').textContent = bookTitle;
+
+            // Simulate loading comments (in a real app, this would fetch from backend)
+            const commentsList = document.getElementById('comments-list');
+            const noCommentsMessage = document.getElementById('no-comments-message');
+            const addCommentForm = document.getElementById('add-comment-form');
+
+            // Sample comments based on book ID
+            const bookId = this.dataset.bookId;
+            let commentsHtml = '';
+
+            switch(bookId) {
+                case '1': // چگونه تاریخ بخوانیم
+                    commentsHtml = `
+                        <div class="comment-item">
+                            <p class="comment-author"><i class="fas fa-user-circle"></i> ناصر رضایی - <span class="comment-date">۱۴۰۳/۰۳/۰۵</span></p>
+                            <p class="comment-text">تحلیل‌های عمیقی از تاریخ‌نگاری ارائه می‌دهد. بسیار آموزنده بود.</p>
+                        </div>
+                        <div class="comment-item">
+                            <p class="comment-author"><i class="fas fa-user-circle"></i> مریم قاسمی - <span class="comment-date">۱۴۰۳/۰۳/۱۲</span></p>
+                            <p class="comment-text">کتابی عالی برای هر کسی که می‌خواهد تاریخ را فراتر از حفظ کردن وقایع بفهمد.</p>
+                        </div>
+                    `;
+                    break;
+                case '5': // قرآن کریم
+                    commentsHtml = `
+                        <div class="comment-item">
+                            <p class="comment-author"><i class="fas fa-user-circle"></i> ایمان جعفری - <span class="comment-date">۱۴۰۳/۰۳/۲۵</span></p>
+                            <p class="comment-text">کتابی بی‌نظیر برای هر مسلمان و جویای حقیقت. ترجمه‌ای بسیار روان و دلنشین دارد.</p>
+                        </div>
+                        <div class="comment-item">
+                            <p class="comment-author"><i class="fas fa-user-circle"></i> سارا احمدی - <span class="comment-date">۱۴۰۳/۰۴/۰۱</span></p>
+                            <p class="comment-text">منبعی غنی از آموزه‌های اخلاقی. توصیه می‌کنم برای تدبر در آیات حتماً مطالعه شود.</p>
+                        </div>
+                    `;
+                    break;
+                default:
+                    commentsHtml = ''; // No comments for other books by default
+            }
+
+            if (commentsHtml) {
+                commentsList.innerHTML = commentsHtml;
+                noCommentsMessage.style.display = 'none';
+            } else {
+                commentsList.innerHTML = '';
+                noCommentsMessage.style.display = 'block';
+            }
+
+            showSection('#comments-section');
+        });
+    });
+
+    // Handle "بازگشت به جزئیات کتاب" button click from comments section
+    document.querySelector('.go-back-to-detail-btn').addEventListener('click', function(e) {
+        e.preventDefault();
+        // This is a simplified approach. In a real app, you'd store which book detail was last viewed.
+        // For this demo, we'll just go back to the books list.
+        showSection('#books-section');
+    });
+
+    // --- Add Book Form Logic ---
+    const addBookForm = document.getElementById('add-book-form');
+    const formMessage = document.getElementById('form-message');
+
+    if (addBookForm) {
+        addBookForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const title = document.getElementById('book-title').value;
+            const author = document.getElementById('book-author').value;
+            const category = document.getElementById('book-category').value;
+
+            if (title && author && category) {
+                formMessage.textContent = `کتاب "${title}" از "${author}" با موفقیت اضافه شد (فقط نمایش ظاهری).`;
+                formMessage.className = 'message success';
+                formMessage.style.display = 'block';
+                addBookForm.reset();
+            } else {
+                formMessage.textContent = 'لطفاً عنوان، نویسنده و دسته‌بندی کتاب را وارد کنید.';
+                formMessage.className = 'message error';
+                formMessage.style.display = 'block';
+            }
+
+            setTimeout(() => {
+                formMessage.style.display = 'none';
+            }, 5000);
+        });
+    }
+
+    // --- Filter Clear Button Logic ---
+    const clearFilterBtn = document.querySelector('.btn-outline-clear');
+    if (clearFilterBtn) {
+        clearFilterBtn.addEventListener('click', function() {
+            document.getElementById('category-filter').value = '';
+            document.getElementById('author-filter').value = '';
+            document.getElementById('title-filter').value = '';
+            alert('فیلترها پاک شدند! (در پروژه واقعی، لیست کتاب‌ها به‌روز می‌شود)');
+        });
+    }
+
+    // --- Add Comment Form Logic ---
+    const addCommentForm = document.getElementById('add-comment-form'); // Changed from querySelector to getElementById
+    if (addCommentForm) {
+        addCommentForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const authorName = document.getElementById('comment-author-name').value;
+            const commentText = document.getElementById('comment-text-input').value;
+
+            if (authorName && commentText) {
+                const newCommentHtml = `
+                    <div class="comment-item">
+                        <p class="comment-author"><i class="fas fa-user-circle"></i> ${authorName} - <span class="comment-date">همین الان</span></p>
+                        <p class="comment-text">${commentText}</p>
+                    </div>
+                `;
+                document.getElementById('comments-list').insertAdjacentHTML('afterbegin', newCommentHtml);
+                document.getElementById('no-comments-message').style.display = 'none';
+                addCommentForm.reset();
+                alert('نظر شما با موفقیت ثبت شد! (فقط نمایش ظاهری)');
+            } else {
+                alert('لطفاً نام و متن نظر را وارد کنید.');
+            }
+        });
+    }
+
+    // --- Auth Section Logic (Login/Register Tabs) ---
+    const authTabButtons = document.querySelectorAll('.auth-tab-btn');
+    const authFormContainers = document.querySelectorAll('.auth-form-container');
+
+    authTabButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const targetTab = this.dataset.tab; // 'login' or 'register'
+
+            authTabButtons.forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+
+            authFormContainers.forEach(container => {
+                container.classList.add('hidden');
+                container.classList.remove('active');
+            });
+
+            document.getElementById(`${targetTab}-form-container`).classList.remove('hidden');
+            document.getElementById(`${targetTab}-form-container`).classList.add('active');
+        });
+    });
+
+    // Dummy Login Form Submission
+    const loginForm = document.getElementById('login-form');
+    const loginMessage = document.getElementById('login-message');
+
+    if (loginForm) {
+        loginForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const username = document.getElementById('login-username').value;
+            const password = document.getElementById('login-password').value;
+
+            // In a real application, you'd send this to backend for validation
+            if (username === 'admin' && password === 'admin123') { // Example credentials
+                loginMessage.textContent = 'ورود موفقیت‌آمیز بود! در حال انتقال به پنل مدیریت...';
+                loginMessage.className = 'message success';
+                loginMessage.style.display = 'block';
+                // alert('با موفقیت وارد شدید!'); // Optional alert
+                setTimeout(() => showSection('#admin-panel-section'), 1500); // Go to admin panel
+            } else {
+                loginMessage.textContent = 'نام کاربری یا رمز عبور اشتباه است.';
+                loginMessage.className = 'message error';
+                loginMessage.style.display = 'block';
+            }
+            setTimeout(() => loginMessage.style.display = 'none', 3000);
+        });
+    }
+
+    // Dummy Register Form Submission
+    const registerForm = document.getElementById('register-form');
+    const registerMessage = document.getElementById('register-message');
+
+    if (registerForm) {
+        registerForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const username = document.getElementById('register-username').value;
+            const email = document.getElementById('register-email').value;
+            const password = document.getElementById('register-password').value;
+            const confirmPassword = document.getElementById('register-confirm-password').value;
+
+            if (password !== confirmPassword) {
+                registerMessage.textContent = 'رمز عبور و تکرار آن یکسان نیستند.';
+                registerMessage.className = 'message error';
+                registerMessage.style.display = 'block';
+                setTimeout(() => registerMessage.style.display = 'none', 3000);
+                return;
+            }
+
+            // Simple password validation (for demo)
+            const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+            if (!passwordRegex.test(password)) {
+                registerMessage.textContent = 'رمز عبور باید حداقل ۸ کاراکتر شامل حروف بزرگ، کوچک، عدد و نماد باشد.';
+                registerMessage.className = 'message error';
+                registerMessage.style.display = 'block';
+                setTimeout(() => registerMessage.style.display = 'none', 5000);
+                return;
+            }
+
+            registerMessage.textContent = `کاربر "${username}" با موفقیت ثبت‌نام شد! (فقط نمایش ظاهری)`;
+            registerMessage.className = 'message success';
+            registerMessage.style.display = 'block';
+            alert('ثبت‌نام شما با موفقیت انجام شد!');
+            registerForm.reset();
+            // Automatically switch to login tab
+            setTimeout(() => {
+                document.querySelector('.auth-tab-btn[data-tab="login"]').click();
+                registerMessage.style.display = 'none';
+            }, 2000);
+        });
+    }
+
+    // --- Admin Panel Navigation Logic (NEW) ---
+    const adminDashboardCards = document.querySelectorAll('.admin-dashboard-grid .dashboard-card');
+    const adminSubPanels = document.querySelectorAll('.admin-sub-panel');
+    const goBackToAdminDashboardBtns = document.querySelectorAll('.go-back-to-admin-dashboard');
+
+    function showAdminSubPanel(panelId) {
+        adminSubPanels.forEach(panel => {
+            panel.classList.add('hidden');
+            panel.classList.remove('active');
+        });
+        document.querySelector(panelId).classList.remove('hidden');
+        document.querySelector(panelId).classList.add('active');
+    }
+
+    adminDashboardCards.forEach(card => {
+        card.addEventListener('click', function(e) {
+            e.preventDefault(); // Prevent default link behavior if applicable
+            const targetPanelId = this.dataset.adminPanelTarget;
+            showAdminSubPanel(targetPanelId);
+        });
+    });
+
+    goBackToAdminDashboardBtns.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            adminSubPanels.forEach(panel => {
+                panel.classList.add('hidden');
+                panel.classList.remove('active');
+            });
+            // Show the main admin dashboard grid
+            // No direct ID for the grid itself, but we want to go back to the top of admin-panel-section
+            // For simplicity, we just show admin-panel-section, and the default sub-panel can be shown via showAdminSubPanel if needed.
+            // Or we can just set the active class back to the main section and let default CSS handle the grid.
+            document.getElementById('admin-panel-section').classList.remove('hidden');
+            document.getElementById('admin-panel-section').classList.add('active');
+            window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to top of admin section
+        });
+    });
+
+    // Special handling for "افزودن کتاب جدید" button within admin panel to go to Add Book Section
+    document.querySelector('.add-new-book-from-admin')?.addEventListener('click', function(e) {
+        e.preventDefault();
+        showSection('#add-book-section');
+    });
+
+    // --- Handle category links in "Kashf Konid" section ---
+    document.querySelectorAll('.category-card h4 a').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const categoryToFilter = this.dataset.filterCategory;
+            document.getElementById('category-filter').value = categoryToFilter;
+            showSection('#books-section');
+        });
+    });
+
+
+    // Initially show the home section and set active link
+    showSection('#home-section');
+});

@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>کتابخانه شخصی سید محمد جواد طباطبائی</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/fonts/webfonts/Vazirmatn-Regular.woff2" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/fonts/webfonts/Vazirmatn-Bold.woff2" rel="stylesheet">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1><a href="#">کتابخانه شخصی سید محمد جواد طباطبائی</a></h1>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="#home-section" class="active-link">صفحه اصلی</a></li>
+                        <li><a href="#books-section">لیست کتاب‌ها</a></li>
+                        <li><a href="#add-book-section">افزودن کتاب جدید</a></li>
+                        <li><a href="#about-section">درباره کتابخانه</a></li>
+                        <li><a href="#auth-section" class="btn btn-login"><i class="fas fa-user-lock"></i> ورود / مدیریت</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="search-bar-header">
+                <input type="text" placeholder="عنوان، نویسنده، موضوع... هرچیزی که دنبالشی؟">
+                <button><i class="fas fa-search"></i> جستجو کن</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content container">
+
+        <section id="home-section" class="content-section active">
+            <div class="hero-section">
+                <h2>به گنجینه دانایی خوش آمدید!</h2>
+                <p>در این کتابخانه شخصی، دریچه‌ای به سوی جهان بی‌کران علم و ادبیات باز است. مجموعه‌ای ارزشمند از کتب منتخب در انتظار شماست تا ذهن خود را سیراب کنید و به دانش و بینش خود بیفزایید.</p>
+                <a href="#books-section" class="btn btn-primary-alt"><i class="fas fa-book-reader"></i> شروع به گشت و گذار در کتاب‌ها</a>
+                <a href="#add-book-section" class="btn btn-secondary-outline-alt"><i class="fas fa-plus-circle"></i> کتاب جدید اضافه کن!</a>
+            </div>
+
+            <div class="quick-stats">
+                <div class="stat-card">
+                    <h3><i class="fas fa-book-open"></i> تعداد کل کتاب‌ها</h3>
+                    <p>+<span class="stat-number">۲۵۰</span> جلد</p>
+                </div>
+                <div class="stat-card">
+                    <h3><i class="fas fa-feather-alt"></i> نویسندگان نامی</h3>
+                    <p>+<span class="stat-number">۱۰۰</span> نفر</p>
+                </div>
+                <div class="stat-card">
+                    <h3><i class="fas fa-sitemap"></i> دسته‌بندی‌های متنوع</h3>
+                    <p>+<span class="stat-number">۳۵</span> موضوع</p>
+                </div>
+                 <div class="stat-card">
+                    <h3><i class="fas fa-users-cog"></i> مدیر کتابخانه</h3>
+                    <p>سید محمد جواد طباطبائی</p>
+                </div>
+            </div>
+
+            <h3 class="section-subtitle">جدیدترین‌های گنجینه ما</h3>
+            <div class="book-grid">
+                <div class="book-card">
+                    <img src="https://images.unsplash.com/photo-1549241527-31c26b527022?q=80&w=300&h=400&fit=crop&crop=faces&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="چگونه تاریخ بخوانیم">
+                    <div class="book-info-grid">
+                        <h4>چگونه تاریخ بخوانیم</h4>
+                        <p class="author"><i class="fas fa-user-edit"></i> نوشته: آلبرتو موراویا</p>
+                        <p class="category"><i class="fas fa-tag"></i> تاریخ، روش‌شناسی</p>
+                        <a href="#book-detail-sample-1" class="btn btn-sm btn-info-outline view-book-detail">جزئیات بیشتر</a>
+                    </div>
+                </div>
+                <div class="book-card">
+                    <img src="https://images.unsplash.com/photo-1621295286576-9280b13cf3c9?q=80&w=300&h=400&fit=crop&crop=faces&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="جامعه شناسی نوین">
+                     <div class="book-info-grid">
+                        <h4>جامعه شناسی نوین</h4>
+                        <p class="author"><i class="fas fa-user-edit"></i> نوشته: آنتونی گیدنز</p>
+                        <p class="category"><i class="fas fa-tag"></i> علوم اجتماعی، جامعه‌شناسی</p>
+                        <a href="#book-detail-sample-2" class="btn btn-sm btn-info-outline view-book-detail">جزئیات بیشتر</a>
+                    </div>
+                </div>
+                <div class="book-card">
+                    <img src="https://images.unsplash.com/photo-1549465220-1a92b23a54a9?q=80&w=300&h=400&fit=crop&crop=faces&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="راز سعادتمندی">
+                     <div class="book-info-grid">
+                        <h4>راز سعادتمندی</h4>
+                        <p class="author"><i class="fas fa-user-edit"></i> نوشته: جان اسمیت</p>
+                        <p class="category"><i class="fas fa-tag"></i> روانشناسی، خودسازی</p>
+                        <a href="#book-detail-sample-3" class="btn btn-sm btn-info-outline view-book-detail">جزئیات بیشتر</a>
+                    </div>
+                </div>
+                <div class="book-card">
+                    <img src="https://images.unsplash.com/photo-1548171120-7f28ed55a153?q=80&w=300&h=400&fit=crop&crop=faces&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="فیزیک کوانتوم برای همه">
+                    <div class="book-info-grid">
+                        <h4>فیزیک کوانتوم برای همه</h4>
+                        <p class="author"><i class="fas fa-user-edit"></i> نوشته: پائول دیراک</p>
+                        <p class="category"><i class="fas fa-tag"></i> فیزیک، علوم پایه</p>
+                        <a href="#book-detail-sample-4" class="btn btn-sm btn-info-outline view-book-detail">جزئیات بیشتر</a>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="section-subtitle">کشف کنید: دسته‌بندی‌های اصلی</h3>
+            <div class="category-grid">
+                <div class="category-card">
+                    <i class="fas fa-history"></i>
+                    <h4><a href="#books-section" data-filter-category="تاریخ">تاریخ و تمدن</a></h4>
+                    <p>کاوش در گذشته‌های دور و نزدیک ایران و جهان.</p>
+                </div>
+                <div class="category-card">
+                    <i class="fas fa-brain"></i>
+                    <h4><a href="#books-section" data-filter-category="فلسفه">فلسفه و اندیشه</a></h4>
+                    <p>غواصی در اعماق ذهن و مفاهیم بنیادین هستی.</p>
+                </div>
+                <div class="category-card">
+                    <i class="fas fa-pen-nib"></i>
+                    <h4><a href="#books-section" data-filter-category="ادبیات">ادبیات و شعر</a></h4>
+                    <p>سفر به دنیای کلمات موزون و داستان‌های جاودان.</p>
+                </div>
+                <div class="category-card">
+                    <i class="fas fa-flask"></i>
+                    <h4><a href="#books-section" data-filter-category="علوم_پایه">علوم پایه و کاربردی</a></h4>
+                    <p>از اسرار فیزیک تا شگفتی‌های زیست‌شناسی.</p>
+                </div>
+                 <div class="category-card">
+                    <i class="fas fa-pray"></i>
+                    <h4><a href="#books-section" data-filter-category="علوم_اسلامی">علوم اسلامی و مذهبی</a></h4>
+                    <p>معارف قرآن، حدیث، فقه و اصول.</p>
+                </div>
+                <div class="category-card">
+                    <i class="fas fa-laptop-code"></i>
+                    <h4><a href="#books-section" data-filter-category="فناوری">فناوری و مهندسی</a></h4>
+                    <p>آخرین دستاوردهای دنیای مدرن و تکنولوژی.</p>
+                </div>
+                <div class="category-card">
+                    <i class="fas fa-smile"></i>
+                    <h4><a href="#books-section" data-filter-category="روانشناسی">روانشناسی و خودیاری</a></h4>
+                    <p>شناخت خویشتن و مسیر رشد فردی.</p>
+                </div>
+                <div class="category-card">
+                    <i class="fas fa-paint-brush"></i>
+                    <h4><a href="#books-section" data-filter-category="هنر">هنر و زیبایی‌شناسی</a></h4>
+                    <p>زیبایی‌شناسی، نقد هنری و تاریخ هنر.</p>
+                </div>
+            </div>
+
+            <h3 class="section-subtitle">چرا این کتابخانه؟</h3>
+            <div class="why-us">
+                <div class="why-us-item">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <h4>مجموعه‌ای دست‌چین‌شده</h4>
+                    <p>کتاب‌ها با دقت و وسواس زیاد انتخاب شده‌اند تا بهترین تجربه مطالعه را داشته باشید.</p>
+                </div>
+                <div class="why-us-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <h4>امنیت اطلاعات</h4>
+                    <p>امنیت داده‌های شما در اولویت قرار دارد. (اشاره به امنیت بک‌اند که بعداً پیاده‌سازی می‌شود)</p>
+                </div>
+                <div class="why-us-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <h4>منبع الهام و یادگیری</h4>
+                    <p>فضایی برای کشف کتاب‌های جدید و گسترش دایره دانش.</p>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="books-section" class="content-section">
+            <h2 class="section-title">تمام کتاب‌های کتابخانه سید محمد جواد طباطبائی</h2>
+            <div class="filter-options">
+                <select id="category-filter">
+                    <option value="">همه دسته‌بندی‌ها</option>
+                    <option value="ادبیات">ادبیات</option>
+                    <option value="تاریخ">تاریخ</option>
+                    <option value="فلسفه">فلسفه</option>
+                    <option value="علوم_اسلامی">علوم اسلامی</option>
+                    <option value="علمی_فناوری">علمی و فناوری</option>
+                    <option value="روانشناسی">روانشناسی</option>
+                    <option value="هنر">هنر و زیبایی‌شناسی</option>
+                    </select>
+                <input type="text" id="author-filter" placeholder="نام نویسنده را اینجا وارد کن...">
+                <input type="text" id="title-filter" placeholder="دنبال عنوان خاصی هستی؟">
+                <button class="btn btn-secondary-outline"><i class="fas fa-filter"></i> فیلتر کن</button>
+                <button class="btn btn-outline-clear"><i class="fas fa-sync-alt"></i> پاک کردن فیلترها</button>
+            </div>
+            <div class="book-list">
+                <div class="book-list-item">
+                    <img src="https://images.unsplash.com/photo-1549241527-31c26b527022?q=80&w=120&h=180&fit=crop&crop=faces&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="چگونه تاریخ بخوانیم">
+                    <div class="book-info">
+                        <h3><a href="#book-detail-sample-1" class="view-book-detail">چگونه تاریخ بخوانیم</a></h3>
+                        <p>نویسنده: <span class="author">آلبرتو موراویا</span></p>
+                        <p>موضوع: <span class="category">تاریخ، روش‌شناسی</span></p>
+                        <p class="description">کتابی عمیق در مورد روش‌های مطالعه و تحلیل تاریخ، مناسب برای دانشجویان و پژوهشگران تاریخ.</p>
+                        <a href="#book-detail-sample-1" class="btn btn-sm btn-primary view-book-detail">جزئیات بیشتر</a>
+                    </div>
+                </div>
+                <div class="book-list-item">
+                    <img src="https://images.unsplash.com/photo-1621295286576-9280b13cf3c9?q=80&w=120&h=180&fit=crop&crop=faces&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="جامعه شناسی نوین">
+                    <div class="book-info">
+                        <h3><a href="#book-detail-sample-2" class="view-book-detail">جامعه شناسی نوین</a></h3>
+                        <p>نویسنده: <span class="author">آنتونی گیدنز</span></p>
+                        <p>موضوع: <span class="category">علوم اجتماعی، جامعه‌شناسی</span></p>
+                        <p class="description">یکی از منابع اصلی و جامع در زمینه جامعه‌شناسی معاصر که به بررسی نظریه‌ها و مفاهیم کلیدی این علم می‌پردازد.</p>
+                        <a href="#book-detail-sample-2" class="btn btn-sm btn-primary view-book-detail">جزئیات بیشتر</a>
+                    </div>
+                </div>
+                <div class="book-list-item">
+                    <img src="https://images.unsplash.com/photo-1549465220-1a92b23a54a9?q=80&w=120&h=180&fit=crop&crop=faces&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="راز سعادتمندی">
+                    <div class="book-info">
+                        <h3><a href="#book-detail-sample-3" class="view-book-detail">راز سعادتمندی</a></h3>
+                        <p>نویسنده: <span class="author">جان اسمیت</span></p>
+                        <p>موضوع: <span class="category">روانشناسی، خودسازی</span></p>
+                        <p class="description">راهنمایی عملی برای دستیابی به شادی و رضایت در زندگی با رویکردی نوین در روانشناسی مثبت‌گرا.</p>
+                        <a href="#book-detail-sample-3" class="btn btn-sm btn-primary view-book-detail">جزئیات بیشتر</a>
+                    </div>
+                </div>
+                <div class="book-list-item">
+                    <img src="https://images.unsplash.com/photo-1548171120-7f28ed55a153?q=80&w=120&h=180&fit=crop&crop=faces&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="فیزیک کوانتوم برای همه">
+                    <div class="book-info">
+                        <h3><a href="#book-detail-sample-4" class="view-book-detail">فیزیک کوانتوم برای همه</a></h3>
+                        <p>نویسنده: <span class="author">پائول دیراک</span></p>
+                        <p>موضوع: <span class="category">فیزیک، علوم پایه</span></p>
+                        <p class="description">معرفی ساده و قابل فهم مفاهیم پیچیده فیزیک کوانتوم برای عموم علاقه‌مندان به علم.</p>
+                        <a href="#book-detail-sample-4" class="btn btn-sm btn-primary view-book-detail">جزئیات بیشتر</a>
+                    </div>
+                </div>
+                <div class="book-list-item">
+                    <img src="https://images.unsplash.com/photo-1587391992019-f538e3a24683?q=80&w=120&h=180&fit=crop&crop=faces&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="تاریخ ایران پس از اسلام">
+                    <div class="book-info">
+                        <h3><a href="#book-detail-sample-9" class="view-book-detail">تاریخ ایران پس از اسلام</a></h3>
+                        <p>نویسنده: <span class="author">عبدالحسین زرین‌کوب</span></p>
+                        <p>موضوع: <span class="category">تاریخ، ایران‌شناسی</span></p>
+                        <p class="description">اثری ارزشمند از دکتر زرین‌کوب که به بررسی تاریخ ایران از ورود اسلام تا دوران معاصر می‌پردازد.</p>
+                        <a href="#book-detail-sample-9" class="btn btn-sm btn-primary view-book-detail">جزئیات بیشتر</a>
+                    </div>
+                </div>
+            </div>
+            <div class="pagination">
+                <button class="btn btn-outline" disabled><i class="fas fa-chevron-right"></i> قبلی</button>
+                <span>صفحه ۱ از **۱۰**</span>
+                <button class="btn btn-outline">بعدی <i class="fas fa-chevron-left"></i></button>
+            </div>
+        </section>
+
+        <section id="add-book-section" class="content-section">
+            <h2 class="section-title">افزودن کتاب جدید به کتابخانه</h2>
+            <form id="add-book-form" class="book-form">
+                <div class="form-group">
+                    <label for="book-title">عنوان کتاب:</label>
+                    <input type="text" id="book-title" required>
+                </div>
+                <div class="form-group">
+                    <label for="book-author">نام نویسنده:</label>
+                    <input type="text" id="book-author" required>
+                </div>
+                <div class="form-group">
+                    <label for="book-publisher">ناشر:</label>
+                    <input type="text" id="book-publisher">
+                </div>
+                <div class="form-group">
+                    <label for="book-publish-year">سال انتشار:</label>
+                    <input type="number" id="book-publish-year" min="1000" max="2100">
+                </div>
+                <div class="form-group">
+                    <label for="book-category">دسته‌بندی (موضوع):</label>
+                    <input type="text" id="book-category" placeholder="مثال: تاریخ، فلسفه، رمان" required>
+                </div>
+                 <div class="form-group">
+                    <label for="book-isbn">شابک (ISBN):</label>
+                    <input type="text" id="book-isbn" placeholder="اختیاری">
+                </div>
+                <div class="form-group">
+                    <label for="book-description">خلاصه/توضیحات:</label>
+                    <textarea id="book-description" rows="6"></textarea>
+                </div>
+                 <div class="form-group">
+                    <label for="book-cover">عکس روی جلد کتاب:</label>
+                    <input type="file" id="book-cover" accept="image/*">
+                    <small>فقط فایل‌های تصویری (JPG, PNG) قابل قبول هستند.</small>
+                </div>
+                <button type="submit" class="btn btn-success"><i class="fas fa-plus-circle"></i> افزودن کتاب</button>
+                <div id="form-message" class="message"></div>
+            </form>
+        </section>
+
+        <section id="about-section" class="content-section">
+            <h2 class="section-title">درباره کتابخانه شخصی سید محمد جواد طباطبائی</h2>
+            <p>این کتابخانه، حاصل سال‌ها جمع‌آوری و عشق به کتاب توسط سید محمد جواد طباطبائی است. هدف از ایجاد این بستر آنلاین، دسترسی آسان‌تر به فهرست کتاب‌ها، اشتراک دانش و ایجاد فضایی برای دوست‌داران کتاب است.</p>
+            <p>مجموعه شامل کتب متنوعی در حوزه‌های تاریخ، فلسفه، ادبیات، علوم اسلامی، فناوری و... می‌باشد. امید است که این گنجینه، چراغ راهی برای جویندگان علم و معرفت باشد.</p>
+            <div class="contact-info">
+                <h4>ارتباط با ما:</h4>
+                <p><i class="fas fa-envelope"></i> Email: info@seyedmohammadjavadlibrary.ir</p>
+                <p><i class="fas fa-map-marker-alt"></i> آدرس: قم، ایران (آدرس دقیق ذکر نشده جهت حفظ حریم خصوصی)</p>
+            </div>
+        </section>
+
+        <section id="auth-section" class="content-section hidden">
+            <h2 class="section-title">ورود به پنل مدیریت / ثبت‌نام</h2>
+            <div class="auth-tabs">
+                <button class="auth-tab-btn active" data-tab="login">ورود</button>
+                <button class="auth-tab-btn" data-tab="register">ثبت‌نام</button>
+            </div>
+
+            <div id="login-form-container" class="auth-form-container active">
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="login-username">نام کاربری / ایمیل:</label>
+                        <input type="text" id="login-username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">رمز عبور:</label>
+                        <input type="password" id="login-password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary"><i class="fas fa-sign-in-alt"></i> ورود</button>
+                    <div class="message" id="login-message"></div>
+                </form>
+            </div>
+
+            <div id="register-form-container" class="auth-form-container hidden">
+                <form id="register-form">
+                    <div class="form-group">
+                        <label for="register-username">نام کاربری:</label>
+                        <input type="text" id="register-username" required>
+                    </div>
+                     <div class="form-group">
+                        <label for="register-email">ایمیل:</label>
+                        <input type="email" id="register-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-password">رمز عبور:</label>
+                        <input type="password" id="register-password" required>
+                        <small>رمز عبور باید حداقل ۸ کاراکتر شامل حروف بزرگ، کوچک، عدد و نماد باشد.</small>
+                    </div>
+                     <div class="form-group">
+                        <label for="register-confirm-password">تکرار رمز عبور:</label>
+                        <input type="password" id="register-confirm-password" required>
+                    </div>
+                    <button type="submit" class="btn btn-success"><i class="fas fa-user-plus"></i> ثبت‌نام</button>
+                    <div class="message" id="register-message"></div>
+                </form>
+            </div>
+        </section>
+
+        <section id="admin-panel-section" class="content-section hidden">
+            <h2 class="section-title">پنل مدیریت کتابخانه</h2>
+            <div class="admin-dashboard-grid">
+                <div class="dashboard-card" data-admin-panel-target="#manage-books-panel">
+                    <h3><i class="fas fa-book"></i> مدیریت کتاب‌ها</h3>
+                    <p>افزودن، ویرایش و حذف کتاب‌ها.</p>
+                    <a href="#" class="btn btn-info-outline"><i class="fas fa-cogs"></i> ورود به بخش</a>
+                </div>
+                <div class="dashboard-card" data-admin-panel-target="#manage-users-panel">
+                    <h3><i class="fas fa-users"></i> مدیریت کاربران</h3>
+                    <p>بررسی و مدیریت حساب‌های کاربری.</p>
+                    <a href="#" class="btn btn-info-outline"><i class="fas fa-cogs"></i> ورود به بخش</a>
+                </div>
+                <div class="dashboard-card" data-admin-panel-target="#admin-dashboard-overview">
+                    <h3><i class="fas fa-chart-line"></i> داشبورد کلی</h3>
+                    <p>مشاهده آمار و گزارش‌ها.</p>
+                    <a href="#" class="btn btn-info-outline"><i class="fas fa-cogs"></i> مشاهده</a>
+                </div>
+            </div>
+
+            <div id="manage-books-panel" class="admin-sub-panel hidden">
+                <h3 class="section-subtitle">مدیریت کتاب‌ها</h3>
+                <button class="btn btn-primary add-new-book-from-admin"><i class="fas fa-plus-circle"></i> افزودن کتاب جدید</button>
+                <div class="admin-table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>تصویر</th>
+                                <th>عنوان</th>
+                                <th>نویسنده</th>
+                                <th>دسته بندی</th>
+                                <th>عملیات</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><img src="https://images.unsplash.com/photo-1549241527-31c26b527022?q=80&w=70&h=100&fit=crop&crop=faces" alt="چگونه تاریخ بخوانیم"></td>
+                                <td>چگونه تاریخ بخوانیم</td>
+                                <td>آلبرتو موراویا</td>
+                                <td>تاریخ</td>
+                                <td>
+                                    <button class="btn btn-sm btn-outline edit-book-btn" data-book-id="1"><i class="fas fa-edit"></i> ویرایش</button>
+                                    <button class="btn btn-sm btn-danger delete-book-btn" data-book-id="1"><i class="fas fa-trash"></i> حذف</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="https://images.unsplash.com/photo-1621295286576-9280b13cf3c9?q=80&w=70&h=100&fit=crop&crop=faces" alt="جامعه شناسی نوین"></td>
+                                <td>جامعه شناسی نوین</td>
+                                <td>آنتونی گیدنز</td>
+                                <td>علوم اجتماعی</td>
+                                <td>
+                                    <button class="btn btn-sm btn-outline edit-book-btn" data-book-id="2"><i class="fas fa-edit"></i> ویرایش</button>
+                                    <button class="btn btn-sm btn-danger delete-book-btn" data-book-id="2"><i class="fas fa-trash"></i> حذف</button>
+                                </td>
+                            </tr>
+                             <tr>
+                                <td><img src="https://images.unsplash.com/photo-1549465220-1a92b23a54a9?q=80&w=70&h=100&fit=crop&crop=faces" alt="راز سعادتمندی"></td>
+                                <td>راز سعادتمندی</td>
+                                <td>جان اسمیت</td>
+                                <td>روانشناسی</td>
+                                <td>
+                                    <button class="btn btn-sm btn-outline edit-book-btn" data-book-id="3"><i class="fas fa-edit"></i> ویرایش</button>
+                                    <button class="btn btn-sm btn-danger delete-book-btn" data-book-id="3"><i class="fas fa-trash"></i> حذف</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <button class="btn btn-outline go-back-to-admin-dashboard"><i class="fas fa-arrow-right"></i> بازگشت به داشبورد</button>
+            </div>
+
+            <div id="manage-users-panel" class="admin-sub-panel hidden">
+                <h3 class="section-subtitle">مدیریت کاربران</h3>
+                 <div class="admin-table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>نام کاربری</th>
+                                <th>ایمیل</th>
+                                <th>نقش</th>
+                                <th>تاریخ عضویت</th>
+                                <th>عملیات</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>admin_user</td>
+                                <td>admin@example.com</td>
+                                <td>مدیر</td>
+                                <td>۱۴۰۲/۰۱/۱۵</td>
+                                <td>
+                                    <button class="btn btn-sm btn-outline"><i class="fas fa-edit"></i> ویرایش</button>
+                                    <button class="btn btn-sm btn-danger"><i class="fas fa-trash"></i> حذف</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>book_lover</td>
+                                <td>booklover@example.com</td>
+                                <td>کاربر عادی</td>
+                                <td>۱۴۰۳/۰۲/۲۰</td>
+                                <td>
+                                    <button class="btn btn-sm btn-outline"><i class="fas fa-edit"></i> ویرایش</button>
+                                    <button class="btn btn-sm btn-danger"><i class="fas fa-trash"></i> حذف</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <button class="btn btn-outline go-back-to-admin-dashboard"><i class="fas fa-arrow-right"></i> بازگشت به داشبورد</button>
+            </div>
+
+            <div id="admin-dashboard-overview" class="admin-sub-panel hidden">
+                <h3 class="section-subtitle">داشبورد کلی</h3>
+                <div class="quick-stats-admin">
+                    <div class="stat-card">
+                        <h3><i class="fas fa-book"></i> کل کتاب‌ها</h3>
+                        <p>۳۴۲</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3><i class="fas fa-users"></i> کل کاربران</h3>
+                        <p>۱۵</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3><i class="fas fa-comments"></i> کل نظرات</h3>
+                        <p>۷۸</p>
+                    </div>
+                     <div class="stat-card">
+                        <h3><i class="fas fa-arrow-up"></i> کتاب‌های جدید (این ماه)</h3>
+                        <p>۵</p>
+                    </div>
+                </div>
+                <button class="btn btn-outline go-back-to-admin-dashboard"><i class="fas fa-arrow-right"></i> بازگشت به داشبورد</button>
+            </div>
+        </section>
+
+
+        <section id="book-detail-sample-1" class="content-section hidden book-detail-section">
+            <h2 class="section-title">جزئیات کتاب: چگونه تاریخ بخوانیم</h2>
+            <div class="book-detail-main">
+                <div class="book-detail-cover">
+                    <img src="https://images.unsplash.com/photo-1549241527-31c26b527022?q=80&w=300&h=400&fit=crop&crop=faces&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="جلد کتاب چگونه تاریخ بخوانیم">
+                </div>
+                <div class="book-detail-info">
+                    <h3>چگونه تاریخ بخوانیم</h3>
+                    <p class="detail-author"><i class="fas fa-feather-alt"></i> نویسنده: آلبرتو موراویا</p>
+                    <p class="detail-publisher"><i class="fas fa-building"></i> ناشر: -</p>
+                    <p class="detail-year"><i class="fas fa-calendar-alt"></i> سال انتشار: نامشخص</p>
+                    <p class="detail-category"><i class="fas fa-tag"></i> موضوع: تاریخ، روش‌شناسی، نقد</p>
+                    <p class="detail-isbn"><i class="fas fa-barcode"></i> شابک: -</p>
+                    <div class="detail-description">
+                        <h4>خلاصه کتاب:</h4>
+                        <p>این کتاب به قلم آلبرتو موراویا، نویسنده شهیر ایتالیایی، به بررسی روش‌ها و رویکردهای مختلف در مطالعه و درک تاریخ می‌پردازد. موراویا در این اثر، خواننده را به تفکر عمیق درباره ماهیت تاریخ‌نگاری، نقش ذهنیت در روایت رویدادها و چگونگی تحلیل انتقادی منابع تاریخی دعوت می‌کند. این کتاب برای دانشجویان تاریخ، پژوهشگران علوم انسانی و هر کسی که به دنبال درک عمیق‌تری از گذشته است، بسیار مفید خواهد بود. این اثر نه تنها یک راهنمای روش‌شناسی، بلکه دعوتی به تفکر فلسفی درباره تاریخ است.</p>
+                    </div>
+                     <button class="btn btn-outline go-back-btn"><i class="fas fa-arrow-right"></i> بازگشت به لیست</button>
+                     <button class="btn btn-secondary-outline show-comments-btn" data-book-id="1"><i class="fas fa-comments"></i> مشاهده نظرات</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="book-detail-sample-2" class="content-section hidden book-detail-section">
+            <h2 class="section-title">جزئیات کتاب: جامعه شناسی نوین</h2>
+            <div class="book-detail-main">
+                <div class="book-detail-cover">
+                    <img src="https://images.unsplash.com/photo-1621295286576-9280b13cf3c9?q=80&w=300&h=400&fit=crop&crop=faces&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="جلد کتاب جامعه شناسی نوین">
+                </div>
+                <div class="book-detail-info">
+                    <h3>جامعه شناسی نوین</h3>
+                    <p class="detail-author"><i class="fas fa-feather-alt"></i> نویسنده: آنتونی گیدنز</p>
+                    <p class="detail-publisher"><i class="fas fa-building"></i> ناشر: -</p>
+                    <p class="detail-year"><i class="fas fa-calendar-alt"></i> سال انتشار: نامشخص</p>
+                    <p class="detail-category"><i class="fas fa-tag"></i> موضوع: علوم اجتماعی، جامعه‌شناسی، نظریه اجتماعی</p>
+                    <p class="detail-isbn"><i class="fas fa-barcode"></i> شابک: -</p>
+                    <div class="detail-description">
+                        <h4>خلاصه کتاب:</h4>
+                        <p>جامعه‌شناسی نوین نوشته آنتونی گیدنز، یکی از جامع‌ترین و پرفروش‌ترین کتاب‌های درسی در حوزه جامعه‌شناسی است. گیدنز در این اثر، مفاهیم و نظریه‌های کلیدی جامعه‌شناسی را با بیانی روشن و مثال‌هایی از زندگی روزمره، به مخاطب معرفی می‌کند. این کتاب به موضوعاتی چون ساختار اجتماعی، فرهنگ، طبقات اجتماعی، جنسیت، جهانی‌شدن و چالش‌های اجتماعی معاصر می‌پردازد. این اثر برای دانشجویان و علاقه‌مندان به درک عمیق‌تر از جامعه و روابط انسانی، یک منبع ضروری است.</p>
+                    </div>
+                     <button class="btn btn-outline go-back-btn"><i class="fas fa-arrow-right"></i> بازگشت به لیست</button>
+                     <button class="btn btn-secondary-outline show-comments-btn" data-book-id="2"><i class="fas fa-comments"></i> مشاهده نظرات</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="book-detail-sample-3" class="content-section hidden book-detail-section">
+            <h2 class="section-title">جزئیات کتاب: راز سعادتمندی</h2>
+            <div class="book-detail-main">
+                <div class="book-detail-cover">
+                    <img src="https://images.unsplash.com/photo-1549465220-1a92b23a54a9?q=80&w=300&h=400&fit=crop&crop=faces&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="جلد کتاب راز سعادتمندی">
+                </div>
+                <div class="book-detail-info">
+                    <h3>راز سعادتمندی</h3>
+                    <p class="detail-author"><i class="fas fa-feather-alt"></i> نویسنده: جان اسمیت</p>
+                    <p class="detail-publisher"><i class="fas fa-building"></i> ناشر: -</p>
+                    <p class="detail-year"><i class="fas fa-calendar-alt"></i> سال انتشار: نامشخص</p>
+                    <p class="detail-category"><i class="fas fa-tag"></i> موضوع: روانشناسی، خودیاری، توسعه فردی</p>
+                    <p class="detail-isbn"><i class="fas fa-barcode"></i> شابک: -</p>
+                    <div class="detail-description">
+                        <h4>خلاصه کتاب:</h4>
+                        <p>«راز سعادتمندی» کتابی الهام‌بخش است که به خوانندگان کمک می‌کند تا مسیر خود را به سوی یک زندگی پر از شادی و رضایت پیدا کنند. این کتاب بر پایه اصول روانشناسی مثبت‌گرا و تجربیات واقعی افراد نوشته شده و تمرینات عملی و راهکارهایی را برای بهبود کیفیت زندگی، مدیریت استرس، پرورش روابط سالم و دستیابی به اهداف ارائه می‌دهد. اگر به دنبال تغییرات مثبت و دائمی در زندگی خود هستید، این کتاب می‌تواند راهنمای ارزشمندی برای شما باشد.</p>
+                    </div>
+                     <button class="btn btn-outline go-back-btn"><i class="fas fa-arrow-right"></i> بازگشت به لیست</button>
+                     <button class="btn btn-secondary-outline show-comments-btn" data-book-id="3"><i class="fas fa-comments"></i> مشاهده نظرات</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="book-detail-sample-4" class="content-section hidden book-detail-section">
+            <h2 class="section-title">جزئیات کتاب: فیزیک کوانتوم برای همه</h2>
+            <div class="book-detail-main">
+                <div class="book-detail-cover">
+                    <img src="https://images.unsplash.com/photo-1548171120-7f28ed55a153?q=80&w=300&h=400&fit=crop&crop=faces&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="جلد کتاب فیزیک کوانتوم برای همه">
+                </div>
+                <div class="book-detail-info">
+                    <h3>فیزیک کوانتوم برای همه</h3>
+                    <p class="detail-author"><i class="fas fa-feather-alt"></i> نویسنده: پائول دیراک</p>
+                    <p class="detail-publisher"><i class="fas fa-building"></i> ناشر: -</p>
+                    <p class="detail-year"><i class="fas fa-calendar-alt"></i> سال انتشار: نامشخص</p>
+                    <p class="detail-category"><i class="fas fa-tag"></i> موضوع: فیزیک، علوم پایه، مکانیک کوانتوم</p>
+                    <p class="detail-isbn"><i class="fas fa-barcode"></i> شابک: -</p>
+                    <div class="detail-description">
+                        <h4>خلاصه کتاب:</h4>
+                        <p>کتاب «فیزیک کوانتوم برای همه» به قلم پائول دیراک، یکی از بنیانگذاران مکانیک کوانتوم، تلاشی است برای توضیح مفاهیم شگفت‌انگیز و بعضاً پیچیده این علم برای مخاطبان غیرمتخصص. دیراک با بیانی شیوا و مثال‌های روشن، پدیده‌های کوانتومی مانند دوگانگی موج-ذره، اصل عدم قطعیت و درهم‌تنیدگی کوانتومی را تشریح می‌کند. این کتاب دروازه‌ای عالی برای ورود به دنیای فیزیک مدرن و درک پایه‌های جهان در مقیاس‌های بسیار کوچک است.</p>
+                    </div>
+                     <button class="btn btn-outline go-back-btn"><i class="fas fa-arrow-right"></i> بازگشت به لیست</button>
+                     <button class="btn btn-secondary-outline show-comments-btn" data-book-id="4"><i class="fas fa-comments"></i> مشاهده نظرات</button>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="book-detail-sample-5" class="content-section hidden book-detail-section">
+            <h2 class="section-title">جزئیات کتاب: قرآن کریم</h2>
+            <div class="book-detail-main">
+                <div class="book-detail-cover">
+                    <img src="https://images.unsplash.com/photo-1555193910-6c0c29124403?q=80&w=300&h=400&fit=crop&crop=faces&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="جلد کتاب قرآن کریم">
+                </div>
+                <div class="book-detail-info">
+                    <h3>قرآن کریم</h3>
+                    <p class="detail-author"><i class="fas fa-feather-alt"></i> نویسنده: جمع‌آوری شده</p>
+                    <p class="detail-publisher"><i class="fas fa-building"></i> ناشر: -</p>
+                    <p class="detail-year"><i class="fas fa-calendar-alt"></i> سال: قرن ۷ میلادی</p>
+                    <p class="detail-category"><i class="fas fa-tag"></i> موضوع: علوم اسلامی، مذهبی، الهیات</p>
+                    <p class="detail-isbn"><i class="fas fa-barcode"></i> شابک: -</p>
+                    <div class="detail-description">
+                        <h4>خلاصه کتاب:</h4>
+                        <p>قرآن کریم، کتاب مقدس دین اسلام و معجزه پیامبر اکرم (ص) است که از طریق وحی الهی بر ایشان نازل شده است. این کتاب شامل دستورات دینی، اخلاقی، اجتماعی و قانونی است که راهنمای زندگی مسلمانان در تمام جنبه‌ها می‌باشد. قرآن در ۲۳ سال و به تدریج بر پیامبر اسلام نازل شده و شامل ۱۱۴ سوره است که دربرگیرنده آموزه‌های عمیق توحیدی، قصص انبیا، مباحث فقهی و اخلاقی می‌باشد. مفاهیم عمیق و زیبایی‌های ادبی آن، تأثیر شگرفی بر فرهنگ و تمدن بشری داشته است.</p>
+                    </div>
+                     <button class="btn btn-outline go-back-btn"><i class="fas fa-arrow-right"></i> بازگشت به لیست</button>
+                     <button class="btn btn-secondary-outline show-comments-btn" data-book-id="5"><i class="fas fa-comments"></i> مشاهده نظرات</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="book-detail-sample-6" class="content-section hidden book-detail-section">
+            <h2 class="section-title">جزئیات کتاب: شاهنامه فردوسی</h2>
+            <div class="book-detail-main">
+                <div class="book-detail-cover">
+                    <img src="https://images.unsplash.com/photo-1579546998492-93881580218b?q=80&w=300&h=400&fit=crop&crop=faces&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="جلد کتاب شاهنامه فردوسی">
+                </div>
+                <div class="book-detail-info">
+                    <h3>شاهنامه فردوسی</h3>
+                    <p class="detail-author"><i class="fas fa-feather-alt"></i> نویسنده: ابوالقاسم فردوسی</p>
+                    <p class="detail-publisher"><i class="fas fa-building"></i> ناشر: - (اولین نسخه خطی)</p>
+                    <p class="detail-year"><i class="fas fa-calendar-alt"></i> سال: قرن ۱۰ و ۱۱ میلادی</p>
+                    <p class="detail-category"><i class="fas fa-tag"></i> موضوع: ادبیات، حماسه، اساطیر ایران، تاریخ</p>
+                    <p class="detail-isbn"><i class="fas fa-barcode"></i> شابک: -</p>
+                    <div class="detail-description">
+                        <h4>خلاصه کتاب:</h4>
+                        <p>شاهنامه، اثر حماسی و ملی ایران، سروده حکیم ابوالقاسم فردوسی، شامل بیش از ۶۰ هزار بیت شعر است که در طول ۳۰ سال سروده شده است. این کتاب داستان‌های اساطیری و تاریخی ایران را از آغاز آفرینش کیومرث تا فروپاشی ساسانیان به دست اعراب روایت می‌کند. فردوسی با این اثر، زبان فارسی را برای همیشه زنده نگه داشت و هویت ملی ایرانیان را استحکام بخشید. شخصیت‌هایی چون رستم، سهراب، سیاوش و اسفندیار از قهرمانان این اثر جاودانه هستند.</p>
+                    </div>
+                     <button class="btn btn-outline go-back-btn"><i class="fas fa-arrow-right"></i> بازگشت به لیست</button>
+                     <button class="btn btn-secondary-outline show-comments-btn" data-book-id="6"><i class="fas fa-comments"></i> مشاهده نظرات</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="book-detail-sample-7" class="content-section hidden book-detail-section">
+            <h2 class="section-title">جزئیات کتاب: منطق الطیر</h2>
+            <div class="book-detail-main">
+                <div class="book-detail-cover">
+                    <img src="https://images.unsplash.com/photo-1549465220-1a92b23a54a9?q=80&w=300&h=400&fit=crop&crop=faces&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="جلد کتاب منطق الطیر عطار">
+                </div>
+                <div class="book-detail-info">
+                    <h3>منطق الطیر</h3>
+                    <p class="detail-author"><i class="fas fa-feather-alt"></i> نویسنده: شیخ فریدالدین عطار نیشابوری</p>
+                    <p class="detail-publisher"><i class="fas fa-building"></i> ناشر: -</p>
+                    <p class="detail-year"><i class="fas fa-calendar-alt"></i> سال: قرن ۱۲ میلادی</p>
+                    <p class="detail-category"><i class="fas fa-tag"></i> موضوع: ادبیات عرفانی، شعر، تصوف</p>
+                    <p class="detail-isbn"><i class="fas fa-barcode"></i> شابک: -</p>
+                    <div class="detail-description">
+                        <h4>خلاصه کتاب:</h4>
+                        <p>منطق الطیر، یکی از برجسته‌ترین آثار ادبیات عرفانی فارسی، سروده عطار نیشابوری است. این مثنوی تمثیلی، حکایت سفر گروهی از مرغان به سرپرستی هدهد برای یافتن سیمرغ (که نماد خداست) را روایت می‌کند. هر پرنده نمادی از روحیات و صفات انسانی است و عبور از هفت وادی (طلب، عشق، معرفت، استغنا، توحید، حیرت، فقر و فنا) نشان‌دهنده مراحل سلوک عرفانی است. این کتاب با زبان ساده و شیرین، مفاهیم عمیق عرفانی را به زیبایی بیان می‌کند.</p>
+                    </div>
+                     <button class="btn btn-outline go-back-btn"><i class="fas fa-arrow-right"></i> بازگشت به لیست</button>
+                     <button class="btn btn-secondary-outline show-comments-btn" data-book-id="7"><i class="fas fa-comments"></i> مشاهده نظرات</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="book-detail-sample-8" class="content-section hidden book-detail-section">
+            <h2 class="section-title">جزئیات کتاب: هزار و یک شب</h2>
+            <div class="book-detail-main">
+                <div class="book-detail-cover">
+                    <img src="https://images.unsplash.com/photo-1621295286576-9280b13cf3c9?q=80&w=300&h=400&fit=crop&crop=faces&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="جلد کتاب هزار و یک شب">
+                </div>
+                <div class="book-detail-info">
+                    <h3>هزار و یک شب</h3>
+                    <p class="detail-author"><i class="fas fa-feather-alt"></i> نویسنده: نامشخص (گردآوری‌شده)</p>
+                    <p class="detail-publisher"><i class="fas fa-building"></i> ناشر: -</p>
+                    <p class="detail-year"><i class="fas fa-calendar-alt"></i> سال: قرون وسطی</p>
+                    <p class="detail-category"><i class="fas fa-tag"></i> موضوع: داستان، فولکلور، ادبیات جهان، افسانه</p>
+                    <p class="detail-isbn"><i class="fas fa-barcode"></i> شابک: -</p>
+                    <div class="detail-description">
+                        <h4>خلاصه کتاب:</h4>
+                        <p>هزار و یک شب، مجموعه‌ای از داستان‌ها و افسانه‌های مشهور خاورمیانه است که ریشه در سنت‌های شفاهی ایران، هند و عرب دارد. محور اصلی داستان، شهرزاد است که هر شب برای شاه شهریار داستانی را آغاز می‌کند و آن را ناتمام می‌گذارد تا از مرگ رهایی یابد. این داستان‌ها شامل ماجراهای علی بابا و چهل دزد، سندباد بحری، علاءالدین و چراغ جادو و بسیاری دیگر است که با تخیل و ظرافت خاصی به هم پیوند خورده‌اند و تصویری غنی از فرهنگ شرق را ارائه می‌دهند.</p>
+                    </div>
+                     <button class="btn btn-outline go-back-btn"><i class="fas fa-arrow-right"></i> بازگشت به لیست</button>
+                     <button class="btn btn-secondary-outline show-comments-btn" data-book-id="8"><i class="fas fa-comments"></i> مشاهده نظرات</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="book-detail-sample-9" class="content-section hidden book-detail-section">
+            <h2 class="section-title">جزئیات کتاب: تاریخ ایران پس از اسلام</h2>
+            <div class="book-detail-main">
+                <div class="book-detail-cover">
+                    <img src="https://images.unsplash.com/photo-1587391992019-f538e3a24683?q=80&w=300&h=400&fit=crop&crop=faces&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="جلد کتاب تاریخ ایران پس از اسلام">
+                </div>
+                <div class="book-detail-info">
+                    <h3>تاریخ ایران پس از اسلام</h3>
+                    <p class="detail-author"><i class="fas fa-feather-alt"></i> نویسنده: دکتر عبدالحسین زرین‌کوب</p>
+                    <p class="detail-publisher"><i class="fas fa-building"></i> ناشر: امیرکبیر (و سایر ناشران)</p>
+                    <p class="detail-year"><i class="fas fa-calendar-alt"></i> سال انتشار: ۱۳۴۹ (اولین چاپ)</p>
+                    <p class="detail-category"><i class="fas fa-tag"></i> موضوع: تاریخ، ایران‌شناسی، مطالعات اسلامی</p>
+                    <p class="detail-isbn"><i class="fas fa-barcode"></i> شابک: ۹۷۸-۹۶۴-۰۰۰-۵۵۹-۴</p>
+                    <div class="detail-description">
+                        <h4>خلاصه کتاب:</h4>
+                        <p>کتاب «تاریخ ایران پس از اسلام» اثر ماندگار دکتر عبدالحسین زرین‌کوب، به بررسی جامع و تحلیلی تاریخ ایران از ورود اسلام و انقراض ساسانیان تا زمان صفویه می‌پردازد. زرین‌کوب در این اثر با نگاهی همه‌جانبه، وقایع سیاسی، اجتماعی، فرهنگی و مذهبی این دوره پرفراز و نشیب را تحلیل می‌کند. این کتاب نه تنها یک روایت تاریخی، بلکه کاوشی عمیق در تحولات فکری و تمدنی ایران پس از اسلام است و به دلیل سبک نگارش زیبا و تحلیل‌های دقیق، از منابع اصلی و معتبر در حوزه تاریخ ایران محسوب می‌شود.</p>
+                    </div>
+                     <button class="btn btn-outline go-back-btn"><i class="fas fa-arrow-right"></i> بازگشت به لیست</button>
+                     <button class="btn btn-secondary-outline show-comments-btn" data-book-id="9"><i class="fas fa-comments"></i> مشاهده نظرات</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="comments-section" class="content-section hidden">
+            <h2 class="section-title">نظرات کاربران برای کتاب: <span id="comments-book-title"></span></h2>
+            <div id="comments-list">
+                <div class="comment-item">
+                    <p class="comment-author"><i class="fas fa-user-circle"></i> احمد رضایی - <span class="comment-date">۱۴۰۳/۰۳/۱۵</span></p>
+                    <p class="comment-text">کتابی فوق‌العاده و خواندنی! اطلاعات تاریخی بسیار دقیقی ارائه داده و تحلیل‌ها عالی هستند.</p>
+                </div>
+                <div class="comment-item">
+                    <p class="comment-author"><i class="fas fa-user-circle"></i> فاطمه کریمی - <span class="comment-date">۱۴۰۳/03/20</span></p>
+                    <p class="comment-text">پیشنهاد می‌کنم حتماً این کتاب رو مطالعه کنید. نثر نویسنده بسیار شیواست.</p>
+                </div>
+                <div id="no-comments-message" class="message error" style="display: none;">
+                    هنوز نظری برای این کتاب ثبت نشده است. اولین نفر باش!
+                </div>
+            </div>
+            <div class="add-comment-form">
+                <h3>نظر خود را ثبت کنید:</h3>
+                <form id="add-comment-form">
+                    <div class="form-group">
+                        <label for="comment-author-name">نام شما:</label>
+                        <input type="text" id="comment-author-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="comment-text-input">نظر شما:</label>
+                        <textarea id="comment-text-input" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> ارسال نظر</button>
+                </form>
+            </div>
+            <button class="btn btn-outline go-back-to-detail-btn"><i class="fas fa-arrow-right"></i> بازگشت به جزئیات کتاب</button>
+        </section>
+
+
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; <span id="current-year"></span> کتابخانه شخصی سید محمد جواد طباطبائی. با عشق برای دانش.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
